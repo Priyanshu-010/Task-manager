@@ -37,7 +37,7 @@ A full-stack Task Manager application where users can sign up, log in, and manag
 
 ## 🌐 Live Demo
 
-> _Coming Soon!_ (Will update once deployed to Vercel + Render)
+> [Task-Manager](https://task-manager-1-16mh.onrender.com)
 
 ---
 
