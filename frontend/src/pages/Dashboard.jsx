@@ -1,9 +1,9 @@
 // Dashboard.jsx
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { deleteTask, editTask } from "../services/task";
 import { RotateCcw, Trash2 } from "lucide-react";
+import axiosInstance from "../utils/axios.js";
 
 export default function Dashboard() {
   const [tasks, setTasks] = useState({
@@ -18,7 +18,7 @@ export default function Dashboard() {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/tasks", {
+      const res = await axiosInstance.get("/tasks", {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setTasks(res.data);
@@ -31,8 +31,8 @@ export default function Dashboard() {
 
   const handleAdd = async () => {
     if (!title.trim()) return;
-    await axios.post(
-      "http://localhost:5000/api/tasks",
+    await axiosInstance.post(
+      "/tasks",
       { title },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     );
@@ -47,8 +47,8 @@ export default function Dashboard() {
         : status === "In Progress"
         ? "Done"
         : "To Do";
-    await axios.put(
-      `http://localhost:5000/api/tasks/${id}`,
+    await axiosInstance.put(
+      `/tasks/${id}`,
       { status: nextStatus },
       { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
     );

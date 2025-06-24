@@ -1,6 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import axiosInstance from "../utils/axios.js";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -13,7 +13,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/login", form);
+      const res = await axiosInstance.post("/login", form);
       localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch (error) {
