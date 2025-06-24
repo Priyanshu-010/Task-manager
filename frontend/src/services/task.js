@@ -1,7 +1,7 @@
 // services/task.js
 import axios from "axios";
 
-const API = "http://localhost:5000/api/tasks";
+const API = import.meta.env.VITE_API_URL + "/tasks";
 
 const config = () => ({
   headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
