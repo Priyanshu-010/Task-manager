@@ -8,4 +8,9 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  preview: {
+    host: true,
+    port: 3000,
+    allowedHosts: ['task-manager-1-16mh.onrender.com']
+  }
 })
