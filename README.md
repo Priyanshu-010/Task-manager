@@ -38,6 +38,7 @@ A full-stack Task Manager application where users can sign up, log in, and manag
 ## 🌐 Live Demo
 
 > [Task-Manager](https://task-manager-1-16mh.onrender.com)
+> Note: Please allow a few seconds for the backend to wake up (free Render tier).
 
 ---
 
