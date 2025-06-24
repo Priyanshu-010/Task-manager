@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vite
+dist/
+.vite/
+
+# Build output
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# MySQL
+*.sql
+
+# Misc
+*.log
+*.cache
+
+# macOS
+*.DS_Store
